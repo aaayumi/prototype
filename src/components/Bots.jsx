@@ -1,8 +1,30 @@
 import React from 'react';
 import {FormRow, BigButton} from './Forms';
 
-class CreateBotForm extends React.Component {
+class Category extends React.Component {
+render(){
+  return(
+  <div className="category">
+  <div><h3>CATEGORIES</h3></div>
+  <ul>
+  <li>Greetings</li>
+  <li>Main Switchboard</li>
+  <li>Interjections</li>
+  </ul>
+  </div>
+  )}
+}
 
+function Accessory(prop){
+  return(
+  <div className="botAccessory">
+  <div><h3>Accessory</h3></div>
+
+  </div>
+  )
+}
+
+class CreateBotForm extends React.Component {
     constructor(props) {
     super(props);
     this.state = {tenant: '', bot_name: '', name_error: '', tenant_error: ''};
@@ -28,7 +50,7 @@ class CreateBotForm extends React.Component {
     const tenants = [{id: -1, value:'', label:'Tenant'}].concat(this.props.tenants);
     const options = tenants.map((tenant) => <option key={tenant.id} value={tenant.label}>{tenant.label}</option>);
     return (
-        <div className="container">
+        <div className="botForm">
           <form className="form-signin">
         <div className={this.state.tenant_error? "form-group has-danger": "form-group"} >
           <select type="text"
@@ -63,10 +85,9 @@ function Chatbot(props) {
 }
 
 export default class Bots extends React.Component {
-
     constructor(props) {
     super(props);
-    this.state = {chatbots: [], tenants: []};
+    this.state = {chatbots: [], tenants: [] };
     this.addBot = this.addBot.bind(this);
     }
 
@@ -79,12 +100,15 @@ export default class Bots extends React.Component {
     componentDidMount() {
    
     }
-
     render() {
     const chatbots = this.state.chatbots.map((bot) => <Chatbot bot={bot} key={bot.id}/>);
     return (<div>
-        <CreateBotForm tenants={this.state.tenants} addChatbot={this.addBot}/>
-        <ul className="listGroup">{chatbots}</ul>
+        <div className="botPage">
+       
+        <Category />
+        <CreateBotForm tenants={this.state.tenants} addChatbot={this.addBot} />
+        <Accessory />
+        </div>
         </div>);
     }
 }

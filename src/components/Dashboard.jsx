@@ -72,8 +72,13 @@ export default class Dashboard extends React.Component {
     render() {
     const currentTab = this.state.tab;
     const TabComponent = components[currentTab];
-    return (<div><Logo /><NavBar active={currentTab} onChatbots={this.onChatbots} onStats={this.onStats} onTenants={this.onTenants} onIntegrations={this.onIntegrations} />,
-             <div className="container"><TabComponent /></div><LogoutButton onClick={this.onLogout} />
-        </div>);
+    return (
+    <div>
+    <Logo />
+    <div className="navBarContainer">
+    <NavBar active={currentTab} onChatbots={this.onChatbots} onStats={this.onStats} onTenants={this.onTenants} onIntegrations={this.onIntegrations} />
+    <div className="container"><TabComponent /></div>
+    </div>
+   </div>);
     }
 }
