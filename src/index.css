@@ -12,11 +12,6 @@ body {
     justify-content: space-between;
 }
 
-.navbar {
-   
-  
-}
-
 .navbar-brand {
     text-decoration: none;
     background-color: #581845;
@@ -56,5 +51,47 @@ body {
 .botAccessory {
     height: 1000px;
     border: 1px solid black;
+}
+
+/* Stats page */
+.analytics {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.analytics ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.analytics li {
+    background-color: #581845;
+    height: 100px;
+    width: 300px;
+    margin: 10px 10px;
+    color: white;
+}
+
+.fallback {
+    display: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.fallback ul {
+ list-style-type: none;  
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+}
+
+.fallback li {
+    background-color: #ECE7E1;
+    margin-bottom: 2px;
+    width: 500px;
+    padding: 10px 10px;
+    float: left;
 }
 
