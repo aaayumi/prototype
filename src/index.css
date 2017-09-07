@@ -8,13 +8,13 @@ body {
 /* Header */
 .navBarContainer {
    position: absolute;
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+   justify-content: space-between;
 }
 
 .navbar-brand {
     text-decoration: none;
-    background-color: #581845;
+    background-color: #440C4E;
     padding: 20px 20px;
 }
 
@@ -23,8 +23,14 @@ body {
     color: white;
 }
 
+.navbar {
+    background-color: black;
+    color: white;
+    height: 1000px;
+}
 .navbar ul {
     list-style-type: none;
+     
 }
 
 /* bot */
@@ -54,30 +60,43 @@ body {
 }
 
 /* Stats page */
+
 .analytics {
-  display: flex;
-  justify-content: flex-start;
+ display: absolute;
+}
+
+.analyticsTitle {
+    margin-left: 50px;
 }
 
 .analytics ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: flex-start;
 }
 
 .analytics li {
-    background-color: #581845;
+    background-color: #440C4E;
     height: 100px;
     width: 300px;
     margin: 10px 10px;
     color: white;
+    display: flex;
+    flex-basis: calc(33% - 20px);
+    justify-content: center;
+    flex-direction: column;
 }
 
 .fallback {
-    display: absolute;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.fallbackTitle {
+    margin-left: 50px;
 }
 
 .fallback ul {
@@ -89,9 +108,18 @@ body {
 
 .fallback li {
     background-color: #ECE7E1;
-    margin-bottom: 2px;
-    width: 500px;
+    margin-bottom: 5px;
+    width: 700px;
     padding: 10px 10px;
     float: left;
 }
 
+.TwylaBotButton {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    background-color: #33B86F;
+    border: none;
+    color: white;
+    margin-left: 40px;
+}
