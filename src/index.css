@@ -60,11 +60,11 @@ body {
     justify-content: space-between;
 }
 
-.category h3 {
+#category h3 {
      margin-left: 40px;
 }
 
-.category {
+#category {
     background-color: #ECE7E1;
     height: 1000px;
     width: 20%;
@@ -74,8 +74,12 @@ body {
     margin-left: 40px;
 }
 
-.category ul {
+#category ul {
     list-style-type: none;
+}
+
+#category.isopen {
+
 }
 
 #botForm {
@@ -95,7 +99,7 @@ body {
 }
 
 #botForm.isopen {
-    background-color : #FAF7F2;
+    
 
 }
 
@@ -116,9 +120,23 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    background-color: black;
+    margin-top: 0px;
 }
 
 .firstContainer li {
+   padding: 10px 50px;
+   color: white;
+  
+}
+
+.firstContainer li:hover{
+   padding: 10px 50px;
+   color: white;
+   background-color: #33B86F;
+}
+
+.firstContainer #one {
    
 }
 

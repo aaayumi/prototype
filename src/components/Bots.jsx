@@ -2,9 +2,22 @@ import React from 'react';
 import {FormRow, BigButton} from './Forms';
 
 class Category extends React.Component {
+constructor(props){
+     super(props);
+     this.state={
+      isOpen: false
+      }
+     this.handleClick = this.handleClick.bind(this)
+     }
+
+    handleClick(){
+    this.setState({ isOpen : !this.state.isOpen})
+    console.log(!this.state.isOpen)
+  }
 render(){
+ const categoryStatus = this.state.isOpen ? "isopen" : "";
   return(
-  <div className="category">
+  <div className={categoryStatus} id="category">
   <div><h3>CATEGORIES</h3></div>
   <input className="categoryInput" type="text" value="Add Category" />
   <ul>
@@ -23,6 +36,9 @@ render() {
   <div className="firstContainer">
   <navbar><ul>
   {/* to be added */}
+  <li id="one"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+  <li id="two"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+  <li id="three"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
   </ul></navbar>
   </div>
   <div className="secondContainer"></div>
@@ -31,10 +47,23 @@ render() {
 }
 
 class CreateBotForm extends React.Component {
+     constructor(props){
+     super(props);
+     this.state={
+      isOpen: false
+      }
+     this.handleClick = this.handleClick.bind(this)
+     }
+
+    handleClick(){
+    this.setState({ isOpen : !this.state.isOpen})
+  }
   
     render() {
+    const botStatus = this.state.isOpen ? "isopen" : "";
+    const categoryStatus = this.state.isOpen ? "isopen" : "";
     return (
-    <div id="botForm">
+    <div className={botStatus} id="botForm">
     <h2>MASTER INTENTS</h2>
     <input type="text" value="Add Intent" />
     </div>);
@@ -70,7 +99,6 @@ export default class Bots extends React.Component {
 
     handleClick(){
     this.setState({ isOpen : !this.state.isOpen })
-    console.log(!this.state.isOpen)
     }
 
     render() {
@@ -80,7 +108,7 @@ export default class Bots extends React.Component {
         <div className="botPage">
        
         <Category />
-        <CreateBotForm className={botStatus} tenants={this.state.tenants} addChatbot={this.addBot} />
+        <CreateBotForm className={botStatus} tenants={this.state.tenants} addChatbot={this.addBot} onClick={this.handleClick} />
         <Accessory />
         </div>
         </div>);
