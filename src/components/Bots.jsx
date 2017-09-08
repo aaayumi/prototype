@@ -16,74 +16,27 @@ render(){
   )}
 }
 
-function Accessory(prop){
+class Accessory extends React.Component {
+render() {
   return(
   <div className="botAccessory">
-  <div><h3>Accessory</h3></div>
-
+  <div className="firstContainer">
+  <navbar><ul>
+  {/* to be added */}
+  </ul></navbar>
   </div>
-  )
+  <div className="secondContainer"></div>
+  </div>
+  )}
 }
 
 class CreateBotForm extends React.Component {
-    constructor(props) {
-    super(props);
-    this.state = {tenant: '', 
-                  bot_name: '', 
-                  name_error: '', 
-                  tenant_error: '',
-                  isOpen : false
-                  };
-    this.tenantChanged = this.tenantChanged.bind(this);
-    this.nameChanged = this.nameChanged.bind(this);
-    this.createBot = this.createBot.bind(this);
-    this.handleClick = this.handleClick.bind(this)
-    }
-
-    nameChanged(e) {
-    this.setState({bot_name: e.target.value});
-    }
-
-    tenantChanged(e) {
-    this.setState({tenant: e.target.value});
-    }
-
-    createBot(e) {
-    e.preventDefault();
-    
-    }
-
-    handleClick() {
-    this.setState({ isOpen : !this.state.isOpen})
-    console.log(!this.state.isOpen)
-    }
-
+  
     render() {
-    const tenants = [{id: -1, value:'', label:'Tenant'}].concat(this.props.tenants);
-    const options = tenants.map((tenant) => <option key={tenant.id} value={tenant.label}>{tenant.label}</option>);
-    const botStatus = this.state.isOpen ? "isopen" : "";
     return (
-        <div className={botStatus} id="botForm">
-          <form className="form-signin">
-        <div className={this.state.tenant_error? "form-group has-danger": "form-group"} >
-          <select type="text"
-              name="tenant"
-              className="form-control"
-              value={this.state.tenant}
-              onChange={this.tenantChanged}>
-            {options}
-          </select>
-          <div className="form-control-feedback">{this.state.tenant_error}</div>
-        </div>
-        <FormRow fieldType={"text"}
-             value={this.state.name}
-             onChange={this.nameChanged}
-             error={this.state.name_error}
-             placeholder={"Bot name"}/>
-
-        <BigButton text="Create bot" onClick={this.createBot} />
-        <button onClick={this.handleClick}>Click</button>
-          </form>
+    <div id="botForm">
+    <h2>MASTER INTENTS</h2>
+    <input type="text" value="Add Intent" />
     </div>);
     }
 

@@ -23,7 +23,7 @@ class NewTenantForm extends React.Component {
 
     render() {
     return (
-        <div className="container">
+        <div className="tenantPage container">
           <form className="form-signin">
         <FormRow fieldType={"text"}
              value={this.state.user}
@@ -78,7 +78,7 @@ export default class Tenants extends React.Component {
     render() {
         const tenants = this.state.tenants.map((tenant) => <Tenant tenant={tenant} key={tenant.id.toString()} />);
     return (<div>
-        <NewTenantForm addTenant={this.addTenant}/>
+        <NewTenantForm  addTenant={this.addTenant}/>
         <ul> {tenants} </ul>
         </div>);
     }

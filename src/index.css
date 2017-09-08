@@ -17,6 +17,13 @@ body {
     padding: 20px 20px;
 }
 
+.tenantName {
+    text-decoration: none;
+    background-color: #312F32;
+    color: white;
+    padding: 20px 20px;
+}
+
 .navbar-brand a {
     text-decoration: none;
     color: white;
@@ -33,6 +40,15 @@ body {
 
 .navbar ul {
     list-style-type: none; 
+}
+
+.navbar li {
+    padding-bottom: 10px;
+}
+
+.navbar li:hover{
+    padding-bottom: 10px;
+    background-color: #33B86F;
 }
 
 /* bot */
@@ -67,6 +83,17 @@ body {
     width: 60%;
 }
 
+#botForm h2 {
+    margin-left: 20px;
+}
+
+#botForm input {
+    margin-left: 20px;
+    width: 80%;
+    padding: 10px 10px;
+    border: 10px solid lightgrey;
+}
+
 #botForm.isopen {
     background-color : #FAF7F2;
 
@@ -76,6 +103,28 @@ body {
     height: 1000px;
     border: 1px solid black;
     width: 20%;
+}
+
+.firstContainer {
+ border: 1px solid black;
+ height: 70%;
+ display: flex;
+ flex-direction: row;
+}
+
+.firstContainer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.firstContainer li {
+   
+}
+
+.secondContainer {
+border: 1px solid black;
+height: 30%;
 }
 
 /* Stats page */
@@ -145,4 +194,36 @@ body {
     border: none;
     color: white;
     margin-left: 40px;
+}
+
+/* Tenant Page */
+.tenantPage {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+/* Integration */
+.integrationPage {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.integrationist {
+display: flex;
+flex-direction: column;
+}
+
+.integrationist ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.integrationist li {
+    padding: 30px 30px;
+  
+    display: flex;
+    flex-basis: calc(33% - 20px);
+    justify-content: center;
+    flex-direction: column;
 }
