@@ -24,30 +24,28 @@ function User(props){
 function NavBar(props) {
    return (<nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
         <ul className="navbar-nav mr-auto">
-         
-          <li className={"nav-item" + (props.active == "bots" ? " active" : "")}>
-            <a className="nav-link" onClick={props.onChatbots}><i className="fa fa-comments fa-2x" aria-hidden="true"></i></a>
-          </li>
-          <li className={"nav-item" + (props.active == "stats" ? " active" : "")}>
-            <a className="nav-link" onClick={props.onStats}><i className="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
-          </li>
-          <li className={"nav-item" + (props.active == "tenants" ? " active" : "")}>
-            <a className="nav-link" onClick={props.onTenants}><i className="fa fa-user fa-2x" aria-hidden="true"></i>
-</a>
-          </li>
-           <li className={"nav-item" + (props.active === "integrations" ? " active" : "")}>
-            <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></a>
-          </li>
+             <li className={"nav-item" + (props.active == "bots" ? " active" : "")}>
+             <a className="nav-link" onClick={props.onChatbots}><i className="fa fa-comments fa-2x" aria-hidden="true"></i></a>
+             </li>
+             <li className={"nav-item" + (props.active == "stats" ? " active" : "")}>
+             <a className="nav-link" onClick={props.onStats}><i className="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
+             </li>
+             <li className={"nav-item" + (props.active == "tenants" ? " active" : "")}>
+             <a className="nav-link" onClick={props.onTenants}><i className="fa fa-user fa-2x" aria-hidden="true"></i>
+             </a>
+             </li>
+             <li className={"nav-item" + (props.active === "integrations" ? " active" : "")}>
+             <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></a>
+             </li>
         </ul>
-            </nav>);
+          </nav>);
 }
 
 export default class Dashboard extends React.Component {
 
     constructor(props) {
     super(props);
-    this.state = {tab: 'stats'
-                   };
+    this.state = { tab: 'stats' };
     this.onChatbots = this.onChatbots.bind(this);
     this.onStats = this.onStats.bind(this);
     this.onTenants = this.onTenants.bind(this);
@@ -55,12 +53,12 @@ export default class Dashboard extends React.Component {
     }
 
     onChatbots(e) {
-    this.setState({tab: 'bots'});
+    this.setState({ tab: 'bots' });
     e.preventDefault();
     }
 
     onStats(e) {
-    this.setState({tab: 'stats'});
+    this.setState({ tab: 'stats'});
     e.preventDefault();
     }
 

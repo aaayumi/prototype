@@ -3,48 +3,44 @@ import {FormRow, BigButton} from './Forms';
 import 'font-awesome/css/font-awesome.css'
 
 class Category extends React.Component {
-constructor(props){
+constructor(props) {
      super(props);
-     this.state={
-      isOpen: false
-      }
-     this.handleClick = this.handleClick.bind(this)
+     this.state={ isOpen: false };
+     this.handleClick = this.handleClick.bind(this);
      }
 
-    handleClick(){
-    this.setState({ isOpen : !this.state.isOpen})
+    handleClick() {
+    this.setState({ isOpen : !this.state.isOpen })
     console.log(!this.state.isOpen)
   }
-render(){
- const categoryStatus = this.state.isOpen ? "isopen" : "";
-  return(
-  <div>
+render() {
+const categoryStatus = this.state.isOpen ? "isopen" : "";
+return(
+<div>
    <div className="categoryContainer">
-    <h3>CATEGORIES</h3>
-    <button onClick={this.handleClick}><i className="slideinButton fa fa-reply fa-2x" aria-hidden="true"></i></button>
-    </div>
+        <h3>CATEGORIES</h3>
+        <button onClick={this.handleClick}><i className="slideinButton fa fa-reply fa-2x" aria-hidden="true"></i></button>
+ </div>
   <div className={categoryStatus} id="category">
-  <input className="categoryInput" type="text" value="Add Category" />
+  <input className="categoryInput" type="text" value="Add Category" placeholder="Add Category" />
   <ul>
-  <li>Greetings</li>
-  <li>Main Switchboard</li>
-  <li>Interjections</li>
-  </ul>
+      <li>Greetings</li>
+      <li>Main Switchboard</li>
+      <li>Interjections</li>
+      </ul>
   </div>
-   </div>
+  </div>
   )}
 }
 
 class Accessory extends React.Component {
-constructor(props){
+constructor(props) {
      super(props);
-     this.state={
-      isOpen: false
-      }
-     this.handleClick = this.handleClick.bind(this)
+     this.state={ isOpen: false };
+     this.handleClick = this.handleClick.bind(this);
      }
 
-    handleClick(){
+    handleClick() {
     this.setState({ isOpen : !this.state.isOpen})
     console.log(!this.state.isOpen)
   }
@@ -53,33 +49,34 @@ const accessoryStatus = this.state.isOpen ? "isopen" : "";
   return(
   <div className="accessoryContainer">
   <div className="accessoryButton">
-  <button onClick={this.handleClick}><i className="slideoutButton fa fa-share fa-2x" aria-hidden="true"></i></button>
+      <button onClick={this.handleClick}><i className="slideoutButton fa fa-share fa-2x" aria-hidden="true"></i></button>
   </div>
   <div className={accessoryStatus} id="accessory">
   <div className="firstContainer">
-  <navbar><ul>
-  <li id="one"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
-  <li id="two"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
-  <li id="three"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
-  </ul></navbar>
+      <navbar>
+      <ul>
+          <li id="one"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+          <li id="two"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+          <li id="three"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+      </ul>
+      </navbar>
   </div>
-  <div className="secondContainer"></div>
+  <div className="secondContainer">
+  </div>
   </div>
   </div>
   )}
 }
 
 class CreateBotForm extends React.Component {
-    constructor(props){
+    constructor(props) {
      super(props);
-     this.state={
-      isOpen: false
-      }
-     this.handleClick = this.handleClick.bind(this)
+     this.state={ isOpen: false };
+     this.handleClick = this.handleClick.bind(this);
      }
 
-    handleClick(){
-    this.setState({ isOpen : !this.state.isOpen})
+    handleClick() {
+    this.setState({ isOpen : !this.state.isOpen })
     console.log(!this.state.isOpen)
     }
     render() { 
@@ -87,8 +84,8 @@ class CreateBotForm extends React.Component {
     return (
     <div>
     <div className={botStatus} id="bot">
-    <h2>MASTER INTENTS</h2>
-    <input type="text" value="Add Intent" />
+        <h2>MASTER INTENTS</h2>
+        <input type="text" value="Add Intent" />
     </div>
     </div>);
     }
@@ -114,11 +111,11 @@ export default class Bots extends React.Component {
     addBot(bot) {
     var existing = this.state.chatbots;
     existing.unshift(bot);
-    this.setState({chatbots: existing});
+    this.setState({ chatbots: existing });
     }
 
     componentDidMount() {
-   
+  
     }
 
     handleClick(){

@@ -5,7 +5,8 @@ body {
   position: relative;
 }
 
-/* Header */
+/***** HEADER *****/
+
 .navBarContainer {
    display: flex;
    flex-direction: column;
@@ -32,7 +33,7 @@ body {
 .navbar {
     background-color: black;
     color: white;
-    height: 1000px;
+    height: 100%;
     width: 100px;
     position: absolute;
     float: left;
@@ -51,12 +52,13 @@ body {
     background-color: #33B86F;
 }
 
-/* bot */
+/***** BOT *****/
 
 .botPage {
     display: flex;
     flex:  1;
     margin-left: 100px;
+    height: 100%;
     justify-content: space-between;
 }
 
@@ -68,7 +70,7 @@ body {
 
 .categoryContainer h3 {
     color: white;
-    margin-right: 10px;
+    padding-right: 20px;
 }
 
 .categoryContainer button {
@@ -78,16 +80,17 @@ body {
 
 .slideinButton {
     background-color: grey;
+    padding-right: 50px;
 }
 
 
-#category h3 {
+.categoryContainer h3 {
      margin-left: 40px;
 }
 
 #category {
     background-color: #ECE7E1;
-    height: 1000px;
+    height: 100%;
     width: 100%;
     padding-top: 30px;
     display: absolute;
@@ -97,22 +100,32 @@ body {
 
 .categoryInput {
     margin-left: 40px;
+    padding: 5px 5px;
 }
 
 #category ul {
     list-style-type: none;
 }
 
-#category.isopen {
-margin-left: -200px;
-transition: .3s;
-display: absolute;
+#category li {
+    padding-bottom: 10px;
 }
 
+#category li:active {
+    padding-bottom: 10px;
+    background-color: purple;
+}
+
+#category.isopen {
+    margin-left: -300px;
+    transition: .3s;
+    display: absolute;
+}
 
 #bot {
+    display: absolute;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     transition: .4s ease-in-out;
     z-index: 0;
 }
@@ -128,9 +141,8 @@ display: absolute;
     border: 10px solid lightgrey;
 }
 
-
 #accessory {
-    height: 1000px;
+    height: 100%;
     border: 1px solid black;
     width: 100%;
     display: fixed;
@@ -152,24 +164,20 @@ display: absolute;
     color: white;
 }
 
-
 #accessory button {
     display: fixed;
 }
+
 #accessory.isopen { 
-display: none;
-transition: right .4s ease-in-out;
+    display: none;
+    transition: right .4s ease-in-out;
 }
 
-#accessory.isopen button { 
-display: block;
-transition: right .4s ease-in-out;
-}
 .firstContainer {
- border: 1px solid black;
- height: 70%;
- display: flex;
- flex-direction: row;
+     border: 1px solid black;
+     height: 60%;
+     display: flex;
+     flex-direction: row;
 }
 
 .firstContainer ul {
@@ -192,23 +200,20 @@ transition: right .4s ease-in-out;
    background-color: #33B86F;
 }
 
-.firstContainer #one {
-   
-}
-
 .secondContainer {
-border: 1px solid black;
-height: 30%;
+   height: 30%;
+   border: 1px solid black;
+
 }
 
-/* Stats page */
+/***** STATS *****/
 
 .Stats{
-    margin-left: 100px;
+   margin-left: 100px;
 }
 
 .analytics {
- display: absolute;
+   display: absolute;
 }
 
 .analyticsTitle {
@@ -246,10 +251,10 @@ height: 30%;
 }
 
 .fallback ul {
- list-style-type: none;  
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
+    list-style-type: none;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .fallback li {
@@ -270,21 +275,22 @@ height: 30%;
     margin-left: 40px;
 }
 
-/* Tenant Page */
+/***** TENANT *****/
+
 .tenantPage {
     margin-top: 50px;
     margin-left: 150px;
 }
 
-/* Integration */
+/***** INTEGRATION *****/
 .integrationPage {
     margin-top: 50px;
     margin-left: 150px;
 }
 
 .integrationist {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .integrationist ul {
@@ -295,7 +301,6 @@ flex-direction: column;
 
 .integrationist li {
     padding: 30px 30px;
-  
     display: flex;
     flex-basis: calc(33% - 20px);
     justify-content: center;
