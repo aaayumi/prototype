@@ -65,10 +65,12 @@ body {
 }
 
 #category {
-    background-color: #ECE7E1;
+    background-color: blue;
     height: 1000px;
-    width: 20%;
-   }
+    width: 100%;
+    display: absolute;
+    transition:  .4s ease-in-out;
+}
 
 .categoryInput {
     margin-left: 40px;
@@ -76,37 +78,47 @@ body {
 
 #category ul {
     list-style-type: none;
+    background-color: red;
 }
 
 #category.isopen {
-
+background-color: red;
+display: none;
+transition: .3s;
 }
 
-#botForm {
+#botStatus {
     background-color : #FAF7F2;
     width: 60%;
+    transition: .4s ease-in-out;
 }
 
-#botForm h2 {
+#botStatus h2 {
     margin-left: 20px;
 }
 
-#botForm input {
+#botStatus input {
     margin-left: 20px;
     width: 80%;
     padding: 10px 10px;
     border: 10px solid lightgrey;
 }
 
-#botForm.isopen {
-    
-
+#botStatus.isopen {
+    background-color: red;
 }
 
-.botAccessory {
+#accessoryStatus {
     height: 1000px;
     border: 1px solid black;
-    width: 20%;
+    width: 100%;
+    display: fixed;
+}
+
+#accessoryStatus.isopen {
+background: black;
+display: none;
+transition: right .4s ease-in-out;
 }
 
 .firstContainer {
