@@ -60,16 +60,39 @@ body {
     justify-content: space-between;
 }
 
+.categoryContainer {
+    margin-top: 0;
+    background-color: grey;
+    display: flex;
+}
+
+.categoryContainer h3 {
+    color: white;
+    margin-right: 10px;
+}
+
+.categoryContainer button {
+    background-color: grey;
+    border: 0;
+}
+
+.slideinButton {
+    background-color: grey;
+}
+
+
 #category h3 {
      margin-left: 40px;
 }
 
 #category {
-    background-color: blue;
+    background-color: #ECE7E1;
     height: 1000px;
     width: 100%;
+    padding-top: 30px;
     display: absolute;
     transition:  .4s ease-in-out;
+    z-index: 1;
 }
 
 .categoryInput {
@@ -78,49 +101,70 @@ body {
 
 #category ul {
     list-style-type: none;
-    background-color: red;
 }
 
 #category.isopen {
-background-color: red;
-display: none;
+margin-left: -200px;
 transition: .3s;
+display: absolute;
 }
 
-#botStatus {
-    background-color : #FAF7F2;
-    width: 60%;
+
+#bot {
+    width: 100%;
+    height: 1000px;
     transition: .4s ease-in-out;
+    z-index: 0;
 }
 
-#botStatus h2 {
+#bot h2 {
     margin-left: 20px;
 }
 
-#botStatus input {
+#bot input {
     margin-left: 20px;
     width: 80%;
     padding: 10px 10px;
     border: 10px solid lightgrey;
 }
 
-#botStatus.isopen {
-    background-color: red;
-}
 
-#accessoryStatus {
+#accessory {
     height: 1000px;
     border: 1px solid black;
     width: 100%;
     display: fixed;
+    z-index: 1;
 }
 
-#accessoryStatus.isopen {
-background: black;
+.accessoryButton {
+    background-color: black;
+}
+
+.accessoryButton button {
+    background-color: black;
+    border: none;
+    padding: 10px 10px;
+}
+
+.slideoutButton {
+    background-color: black;
+    color: white;
+}
+
+
+#accessory button {
+    display: fixed;
+}
+#accessory.isopen { 
 display: none;
 transition: right .4s ease-in-out;
 }
 
+#accessory.isopen button { 
+display: block;
+transition: right .4s ease-in-out;
+}
 .firstContainer {
  border: 1px solid black;
  height: 70%;
