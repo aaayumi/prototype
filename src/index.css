@@ -9,7 +9,6 @@ body {
 .navBarContainer {
    display: flex;
    flex-direction: column;
-  
 }
 
 .navbar-brand {
@@ -33,8 +32,7 @@ body {
 }
 
 .navbar ul {
-    list-style-type: none;
-     
+    list-style-type: none; 
 }
 
 /* bot */
@@ -46,19 +44,32 @@ body {
     justify-content: space-between;
 }
 
+.category h3 {
+     margin-left: 40px;
+}
+
 .category {
     background-color: #ECE7E1;
     height: 1000px;
     width: 20%;
    }
 
+.categoryInput {
+    margin-left: 40px;
+}
+
 .category ul {
     list-style-type: none;
 }
 
-.botForm {
+#botForm {
     background-color : #FAF7F2;
-     width: 60%;
+    width: 60%;
+}
+
+#botForm.isopen {
+    background-color : #FAF7F2;
+
 }
 
 .botAccessory {
@@ -68,6 +79,10 @@ body {
 }
 
 /* Stats page */
+
+.Stats{
+    margin-left: 100px;
+}
 
 .analytics {
  display: absolute;

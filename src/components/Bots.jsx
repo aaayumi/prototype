@@ -6,6 +6,7 @@ render(){
   return(
   <div className="category">
   <div><h3>CATEGORIES</h3></div>
+  <input className="categoryInput" type="text" value="Add Category" />
   <ul>
   <li>Greetings</li>
   <li>Main Switchboard</li>
@@ -27,10 +28,16 @@ function Accessory(prop){
 class CreateBotForm extends React.Component {
     constructor(props) {
     super(props);
-    this.state = {tenant: '', bot_name: '', name_error: '', tenant_error: ''};
+    this.state = {tenant: '', 
+                  bot_name: '', 
+                  name_error: '', 
+                  tenant_error: '',
+                  isOpen : false
+                  };
     this.tenantChanged = this.tenantChanged.bind(this);
     this.nameChanged = this.nameChanged.bind(this);
     this.createBot = this.createBot.bind(this);
+    this.handleClick = this.handleClick.bind(this)
     }
 
     nameChanged(e) {
@@ -46,11 +53,17 @@ class CreateBotForm extends React.Component {
     
     }
 
+    handleClick() {
+    this.setState({ isOpen : !this.state.isOpen})
+    console.log(!this.state.isOpen)
+    }
+
     render() {
     const tenants = [{id: -1, value:'', label:'Tenant'}].concat(this.props.tenants);
     const options = tenants.map((tenant) => <option key={tenant.id} value={tenant.label}>{tenant.label}</option>);
+    const botStatus = this.state.isOpen ? "isopen" : "";
     return (
-        <div className="botForm">
+        <div className={botStatus} id="botForm">
           <form className="form-signin">
         <div className={this.state.tenant_error? "form-group has-danger": "form-group"} >
           <select type="text"
@@ -69,7 +82,7 @@ class CreateBotForm extends React.Component {
              placeholder={"Bot name"}/>
 
         <BigButton text="Create bot" onClick={this.createBot} />
-
+        <button onClick={this.handleClick}>Click</button>
           </form>
     </div>);
     }
@@ -87,8 +100,9 @@ function Chatbot(props) {
 export default class Bots extends React.Component {
     constructor(props) {
     super(props);
-    this.state = {chatbots: [], tenants: [] };
+    this.state = {chatbots: [], tenants: [] , isOpen: false };
     this.addBot = this.addBot.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     }
 
     addBot(bot) {
@@ -100,13 +114,20 @@ export default class Bots extends React.Component {
     componentDidMount() {
    
     }
+
+    handleClick(){
+    this.setState({ isOpen : !this.state.isOpen })
+    console.log(!this.state.isOpen)
+    }
+
     render() {
     const chatbots = this.state.chatbots.map((bot) => <Chatbot bot={bot} key={bot.id}/>);
+    const botStatus = this.state.isOpen ? "isopen" : "";
     return (<div>
         <div className="botPage">
        
         <Category />
-        <CreateBotForm tenants={this.state.tenants} addChatbot={this.addBot} />
+        <CreateBotForm className={botStatus} tenants={this.state.tenants} addChatbot={this.addBot} />
         <Accessory />
         </div>
         </div>);

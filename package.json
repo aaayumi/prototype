@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.12"
+    "react-scripts": "1.0.12",
+    "react-transition-group": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,6 +34,8 @@
     "webpack-dev-server": "^2.7.1",
     "mocha": "^2.4.5",
     "jsdom": "^8.0.1",
-    "sinon": "^1.17.4"
+    "sinon": "^1.17.4",
+    "material-ui": "^0.18.3",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
