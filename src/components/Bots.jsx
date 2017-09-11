@@ -85,7 +85,7 @@ class CreateBotForm extends React.Component {
     <div>
     <div className={botStatus} id="bot">
         <h2>MASTER INTENTS</h2>
-        <input type="text" value="Add Intent" />
+        <input className="botInput" type="text" value="Add Intent" />
     </div>
     </div>);
     }

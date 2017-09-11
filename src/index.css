@@ -33,7 +33,7 @@ body {
 .navbar {
     background-color: black;
     color: white;
-    height: 100%;
+    height: 1035px;
     width: 100px;
     position: absolute;
     float: left;
@@ -58,7 +58,7 @@ body {
     display: flex;
     flex:  1;
     margin-left: 100px;
-    height: 100%;
+    height: 100vh;
     justify-content: space-between;
 }
 
@@ -90,7 +90,7 @@ body {
 
 #category {
     background-color: #ECE7E1;
-    height: 100%;
+    height: 950px;
     width: 100%;
     padding-top: 30px;
     display: absolute;
@@ -125,7 +125,7 @@ body {
 #bot {
     display: absolute;
     width: 100%;
-    height: 100%;
+    height: 900px;
     transition: .4s ease-in-out;
     z-index: 0;
 }
@@ -141,8 +141,15 @@ body {
     border: 10px solid lightgrey;
 }
 
+#bot h2 {
+    display: absolute;
+}
+
+#bot .botInput {
+    display: absolute;
+}
+
 #accessory {
-    height: 100%;
     border: 1px solid black;
     width: 100%;
     display: fixed;
@@ -169,13 +176,13 @@ body {
 }
 
 #accessory.isopen { 
-    display: none;
-    transition: right .4s ease-in-out;
+   display: none;
+   transition: .3s;
 }
 
 .firstContainer {
      border: 1px solid black;
-     height: 60%;
+     height: 60vh;
      display: flex;
      flex-direction: row;
 }
@@ -201,7 +208,7 @@ body {
 }
 
 .secondContainer {
-   height: 30%;
+   height: 40vh;
    border: 1px solid black;
 
 }
