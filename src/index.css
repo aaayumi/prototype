@@ -76,6 +76,7 @@ body {
 .categoryContainer button {
     background-color: grey;
     border: 0;
+    height:  50px;
 }
 
 .slideinButton {
@@ -117,9 +118,16 @@ body {
 }
 
 #category.isopen {
-    margin-left: -300px;
+    display: none;
     transition: .3s;
     display: absolute;
+}
+
+.categoryContainer .isopen {
+    display: none;
+    margin-top: 0;
+    transition: .3s;
+    height: 100px;
 }
 
 #bot {
@@ -179,7 +187,6 @@ body {
    display: none;
    transition: .3s;
 }
-
 .firstContainer {
      border: 1px solid black;
      height: 60vh;

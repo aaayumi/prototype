@@ -15,11 +15,14 @@ constructor(props) {
   }
 render() {
 const categoryStatus = this.state.isOpen ? "isopen" : "";
+const categoryContainer = this.state.isOpen ? "isopen" : "";
 return(
 <div>
    <div className="categoryContainer">
-        <h3>CATEGORIES</h3>
-        <button onClick={this.handleClick}><i className="slideinButton fa fa-reply fa-2x" aria-hidden="true"></i></button>
+   <div className={categoryContainer}>
+        <h3 >CATEGORIES</h3>
+ </div>
+ <button onClick={this.handleClick}><i className="slideinButton fa fa-reply fa-2x" aria-hidden="true"></i></button>
  </div>
   <div className={categoryStatus} id="category">
   <input className="categoryInput" type="text" value="Add Category" placeholder="Add Category" />
