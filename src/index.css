@@ -37,6 +37,7 @@ body {
     width: 100px;
     position: absolute;
     float: left;
+    z-index: 1;
 }
 
 .navbar ul {
@@ -76,14 +77,13 @@ body {
 .categoryContainer button {
     background-color: grey;
     border: 0;
-    height:  50px;
+    height: 50px;
 }
 
 .slideinButton {
     background-color: grey;
     padding-right: 50px;
 }
-
 
 .categoryContainer h3 {
      margin-left: 40px;
@@ -95,8 +95,7 @@ body {
     width: 100%;
     padding-top: 30px;
     display: absolute;
-    transition:  .4s ease-in-out;
-    z-index: 1;
+    transition: transform 400ms ease-out;
 }
 
 .categoryInput {
@@ -117,13 +116,12 @@ body {
     background-color: purple;
 }
 
-#category.isopen {
-    display: none;
-    transition: .3s;
-    display: absolute;
+#category.caOpen {
+    width: -200px;
+    transform: translateX(-100%);
 }
 
-.categoryContainer .isopen {
+.categoryContainer .caOpen {
     display: none;
     margin-top: 0;
     transition: .3s;
@@ -140,14 +138,28 @@ body {
 
 #bot h2 {
     margin-left: 20px;
+    margin-bottom: 50px;
 }
 
 #bot input {
     margin-left: 20px;
-    width: 80%;
+    margin-right: 20px;
+    width: 800px;
     padding: 10px 10px;
     border: 10px solid lightgrey;
+    transition: transform 400ms ease-out;
 }
+
+#botInput.caOpen {
+    margin-left: -150px;
+    width: 1200px;
+}
+
+#botInput.acOpen {
+    margin-right: -150px;
+    width: 1200px;
+}
+
 
 #bot h2 {
     display: absolute;
@@ -162,6 +174,7 @@ body {
     width: 100%;
     display: fixed;
     z-index: 1;
+    transition: transform 400ms ease-out;
 }
 
 .accessoryButton {
@@ -183,10 +196,12 @@ body {
     display: fixed;
 }
 
-#accessory.isopen { 
-   display: none;
+#accessory.acOpen { 
+   margin-right: -500px;
    transition: .3s;
+   transform: translateX(100%);
 }
+
 .firstContainer {
      border: 1px solid black;
      height: 60vh;
