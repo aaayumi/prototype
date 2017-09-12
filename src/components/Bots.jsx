@@ -43,8 +43,9 @@ export default class Bots extends React.Component {
     const categoryStatus = this.state.caOpen ? "caOpen" : "";
     const categoryContainer = this.state.caOpen ? "caOpen" : "";
     const accessoryStatus = this.state.acOpen ? "acOpen" : "";
+    const accessoryButton = this.state.acOpen ? "acOpen" : "";
     const botStatus = !this.state.isOpen ? "isopen" : "";
-    const botInput = this.state.caOpen ? "caOpen" : ( this.state.acOpen? "acOpen" :"");
+    const botInput = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
    
     return (<div>
         <div className="botPage">
@@ -84,10 +85,10 @@ export default class Bots extends React.Component {
     </div>
 
         <div className="accessoryContainer">
-  <div className="accessoryButton">
+  <div className={accessoryButton} id="accessoryButton">
       <button onClick={this.clickHandle}>{this.state.acOpen
-    ? <i className="slideinButton fa fa-reply fa-2x" aria-hidden="true"></i>
-    : <i className="slideinButton fa fa-share fa-2x" aria-hidden="true"></i>
+    ? <i className="slideoutButton fa fa-reply fa-2x" aria-hidden="true"></i>
+    : <i className="slideoutButton fa fa-share fa-2x" aria-hidden="true"></i>
   }</button>
   </div>
   <div className={accessoryStatus} id="accessory">

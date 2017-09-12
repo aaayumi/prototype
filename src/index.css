@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto';
   position: relative;
 }
 
@@ -33,7 +36,7 @@ body {
 .navbar {
     background-color: black;
     color: white;
-    height: 1035px;
+    height: 735px;
     width: 100px;
     position: absolute;
     float: left;
@@ -59,7 +62,7 @@ body {
     display: flex;
     flex:  1;
     margin-left: 100px;
-    height: 100vh;
+    height: 700px;
     justify-content: space-between;
 }
 
@@ -91,7 +94,7 @@ body {
 
 #category {
     background-color: #ECE7E1;
-    height: 950px;
+    height: 650px;
     width: 100%;
     padding-top: 30px;
     display: absolute;
@@ -130,10 +133,14 @@ body {
 
 #bot {
     display: absolute;
-    width: 100%;
-    height: 900px;
+    width: 800px;
+    height: 700px;
     transition: .4s ease-in-out;
     z-index: 0;
+     -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #bot h2 {
@@ -144,22 +151,39 @@ body {
 #bot input {
     margin-left: 20px;
     margin-right: 20px;
-    width: 800px;
+    width: 700px;
     padding: 10px 10px;
-    border: 10px solid lightgrey;
-    transition: transform 400ms ease-out;
+    border: 10px solid #E6E3E8;
+     -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #botInput.caOpen {
-    margin-left: -150px;
-    width: 1200px;
+    margin-left: -200px;
+    width: 950px;
+     -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
 }
 
 #botInput.acOpen {
-    margin-right: -150px;
-    width: 1200px;
+    margin-right: -200px;
+    width: 950px;
+     -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
+#botInput.allOpen {
+    margin-left: -200px;
+    margin-left: -200px;
+    width: 1200px;
+}
 
 #bot h2 {
     display: absolute;
@@ -171,39 +195,43 @@ body {
 
 #accessory {
     border: 1px solid black;
-    width: 100%;
+    width: 250px;
     display: fixed;
     z-index: 1;
     transition: transform 400ms ease-out;
 }
 
-.accessoryButton {
-    background-color: black;
+.accessoryContainer {
+    width: 250px;
 }
 
-.accessoryButton button {
-    background-color: black;
+#accessoryButton{
+    background-color: #656166;
+}
+
+#accessoryButton button {
+    background-color: #656166;
     border: none;
     padding: 10px 10px;
 }
 
+#accessoryButton.acOpen{
+  /* in case it's needed */
+}
+
 .slideoutButton {
-    background-color: black;
+    background-color: #656166;
     color: white;
 }
 
-#accessory button {
-    display: fixed;
-}
-
 #accessory.acOpen { 
-   margin-right: -500px;
+   margin-right: -300px;
    transition: .3s;
    transform: translateX(100%);
 }
 
 .firstContainer {
-     border: 1px solid black;
+     border: 1px solid #656166  ;
      height: 60vh;
      display: flex;
      flex-direction: row;
@@ -213,24 +241,25 @@ body {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    background-color: black;
     margin-top: 0px;
+    margin-left: -40px;
 }
 
 .firstContainer li {
-   padding: 10px 50px;
+   padding: 10px 35px;
    color: white;
+   background-color: #656166;
   
 }
 
 .firstContainer li:hover{
-   padding: 10px 50px;
+   padding: 10px 35px;
    color: white;
    background-color: #33B86F;
 }
 
 .secondContainer {
-   height: 40vh;
+   height: 35vh;
    border: 1px solid black;
 
 }
