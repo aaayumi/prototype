@@ -199,6 +199,30 @@ body {
     display: absolute;
 }
 
+#greeting {
+    display: none;
+}
+
+#greeting.show {
+    display: block;
+}
+
+#mainSwitchboard  {
+    display: none;
+}
+
+#mainSwitchboard.firstShow {
+    display: block;
+}
+
+#interjections {
+    display: none;
+}
+
+#interjections.secondShow {
+    display: block;
+}
+
 #accessory {
     border: 1px solid black;
     width: 250px;
