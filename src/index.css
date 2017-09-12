@@ -34,7 +34,7 @@ body {
 }
 
 .navbar {
-    background-color: black;
+    background-color: #4F504F;
     color: white;
     height: 735px;
     width: 100px;
@@ -44,11 +44,16 @@ body {
 }
 
 .navbar ul {
+    /* margin-top: 0px;
+    margin-left: 0px; */
+    margin:  auto 0;
     list-style-type: none; 
+    text-align: center;
 }
 
 .navbar li {
-    padding-bottom: 10px;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 .navbar li:hover{
@@ -68,7 +73,7 @@ body {
 
 .categoryContainer {
     margin-top: 0;
-    background-color: grey;
+    background-color: #656166;
     display: flex;
 }
 
@@ -78,14 +83,15 @@ body {
 }
 
 .categoryContainer button {
-    background-color: grey;
+    background-color: #656166;
     border: 0;
     height: 50px;
 }
 
 .slideinButton {
-    background-color: grey;
+    background-color: #656166 ;
     padding-right: 50px;
+    color: white;
 }
 
 .categoryContainer h3 {
@@ -260,7 +266,7 @@ body {
 
 .secondContainer {
    height: 35vh;
-   border: 1px solid black;
+   border: 1px solid #6C6D6C;
 
 }
 
