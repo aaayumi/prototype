@@ -293,8 +293,26 @@ body {
 }
 
 .analytics li {
-    background-color: #440C4E;
-    height: 100px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   border: 2px solid black;
+   margin: 10px 10px;
+   flex-basis: 400px;
+}
+
+ /*.analytics ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+  .analytics li {
+    background-color: #440C4E; 
+    border: 1px solid black;
+    height: 500px;
     width: 300px;
     margin: 10px 10px;
     color: white;
@@ -302,7 +320,7 @@ body {
     flex-basis: calc(33% - 20px);
     justify-content: center;
     flex-direction: column;
-}
+} */
 
 .fallback {
     display: flex;
@@ -338,6 +356,13 @@ body {
     color: white;
     margin-left: 40px;
 }
+
+/*===DATA===*/
+
+.newData {
+    width: 400px;
+    height: 100%;
+} 
 
 /***** TENANT *****/
 

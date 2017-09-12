@@ -24,6 +24,8 @@
     "chai": "^3.5.0",
     "chai-enzyme": "^0.8.0",
     "chai-immutable": "^1.6.0",
+    "chart.js": "2.6.0",
+    "react-chartjs-2" : "^2.5.0",
     "enzyme": "^2.9.1",
     "html-webpack-plugin": "^2.30.1",
     "moxios": "^0.4.0",
