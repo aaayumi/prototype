@@ -38,7 +38,7 @@ body {
 .navbar {
     background-color: #4F504F;
     color: white;
-    height: 735px;
+    height: 790px;
     width: 100px;
     position: absolute;
     float: left;
@@ -102,11 +102,11 @@ body {
 
 #category {
     background-color: #ECE7E1;
-    height: 650px;
+    height: 700px;
     width: 100%;
     padding-top: 30px;
     display: absolute;
-    transition: transform 400ms ease-out;
+    transition: transform 600ms ease-out;
 }
 
 .categoryInput {
@@ -122,12 +122,21 @@ body {
 }
 
 #category li {
+    padding: 10px 5px;
+    padding-left: 20px;
     padding-bottom: 10px;
 }
 
-#category li:active {
-    padding-bottom: 10px;
-    background-color: purple;
+#greetingMenu.active {
+    background-color: #CE95F9;
+}
+
+#mainSwitchboardMenu.active {
+    background-color: #CE95F9;
+}
+
+#interjectionsMenu.active {
+    background-color: #CE95F9;
 }
 
 #category.caOpen {
@@ -140,6 +149,11 @@ body {
     margin-top: 0;
     transition: .3s;
     height: 100px;
+   
+}
+
+.categoryContainer .caOpen button {
+     background-color: red;
 }
 
 #bot {
@@ -165,7 +179,7 @@ body {
     width: 700px;
     padding: 10px 10px;
     border: 10px solid #E6E3E8;
-     -webkit-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -174,7 +188,7 @@ body {
 #botInput.caOpen {
     margin-left: -200px;
     width: 950px;
-     -webkit-transition: all 0.5s ease;
+       -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -184,7 +198,7 @@ body {
 #botInput.acOpen {
     margin-right: -200px;
     width: 950px;
-     -webkit-transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -203,16 +217,20 @@ body {
     display: absolute;
 }
 
-/* #greeting {
-    display: none;
-} */
+#greetingList {
+   display: none;
+} 
+
+#greetingList.show {
+    display: block;
+} 
 
 #greetingList {
     left: 0px;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
     list-style: none;
 }
 
@@ -222,47 +240,38 @@ body {
    
 }
 
-#greetingList li:nth-child(even) {
-
-    
-}
-
 #greeting {
     height: 40px;
     width: 830px;
     margin-left: -55px;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 #greeting.caOpen {
     margin-left: -290px;
     width: 1090px;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 #greeting.acOpen {
     margin-right: -250px;
     width: 1200px;
-     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+   -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
 }
 
 #greeting.allOpen {
     margin-left: -290px;
     width: 1500px;
 }
-
-/* #greeting.show {
-    display: block;
-} */
 
 #mainSwitchboard  {
     display: none;
@@ -285,7 +294,7 @@ body {
     width: 250px;
     display: fixed;
     z-index: 1;
-    transition: transform 400ms ease-out;
+    transition: transform 1000ms ease-out;
 }
 
 .accessoryContainer {
@@ -336,7 +345,6 @@ body {
    padding: 10px 35px;
    color: white;
    background-color: #656166;
-  
 }
 
 .firstContainer li:hover{
@@ -346,7 +354,7 @@ body {
 }
 
 .secondContainer {
-   height: 35vh;
+   height: 30vh;
    border: 1px solid #6C6D6C;
 
 }

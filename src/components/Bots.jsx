@@ -41,17 +41,18 @@ export default class Bots extends React.Component {
     }
 
     show() {
-     console.log(this.state.show)
+    this.setState({ show: !this.state.show })
+     console.log("show" + this.state.show)
     }
 
     firstShow() {
     this.setState({ firstShow: !this.state.firstShow })
-    console.log(this.state.firstShow)
+    console.log("firstshow" + this.state.firstShow)
     }
 
     secondShow() {
     this.setState({ secondShow: !this.state.secondShow })
-   console.log(this.state.secondShow)
+   console.log("secondShow" + this.state.secondShow)
     }
 
     render() {
@@ -63,7 +64,13 @@ export default class Bots extends React.Component {
     const botStatus = !this.state.isOpen ? "isopen" : "";
     const botInput = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
     const greeting = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
-    
+    const greetingList = !this.state.show ? "show" : "";
+    const greetingMenu = !this.state.show ? "active" : "";
+    const mainSwitchboard = !this.state.firstShow ? "firstShow" : "";
+    const mainSwitchboardMenu = !this.state.firstShow ? "active" : "";
+    const interjections  = this.state.secondShow ? "secondShow" : "";
+    const interjectionsMenu = !this.state.secondShow ? "active" : "";
+
     return (<div>
         <div className="botPage">
         <div>
@@ -78,14 +85,15 @@ export default class Bots extends React.Component {
        : <i className="slideinButton fa fa-reply fa-2x"  aria-hidden="true"></i>
        }
        </button>
+
        </div>
       
        <div className={categoryStatus} id="category">
        <input className="categoryInput" type="text" placeholder="Add Category" />
       <ul>
-          <li onClick={this.firstShow}>Greetings</li>
-          <li onClick={this.firstShow}>Main Switchboard</li>
-          <li onClick={this.secondShow}>Interjections</li>
+          <li id="greetingMenu" className={greetingMenu} onClick={this.show}>Greetings</li>
+          <li id="mainSwitchboardMenu" className={mainSwitchboardMenu} onClick={this.firstShow}>Main Switchboard</li>
+          <li id="interjectionsMenu" className={interjectionsMenu} onClick={this.secondShow}>Interjections</li>
       </ul>
       </div>
       </div>
@@ -95,7 +103,7 @@ export default class Bots extends React.Component {
        <h2>MASTER INTENTS</h2>
       <input id="botInput" className={botInput} type="text" placeholder="Add Intent" />
 
-       <ul id="greetingList">
+       <ul className={greetingList} id="greetingList">
       <li className={greeting} id="greeting">Greetings</li>
       <li className={greeting} id="greeting">Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</li>
       <li className={greeting} id="greeting">How can I help you today?</li>
@@ -113,7 +121,6 @@ export default class Bots extends React.Component {
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
       </ul>
-
        </div>
        </div>
 
