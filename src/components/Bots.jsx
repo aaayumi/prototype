@@ -62,10 +62,8 @@ export default class Bots extends React.Component {
     const accessoryButton = this.state.acOpen ? "acOpen" : "";
     const botStatus = !this.state.isOpen ? "isopen" : "";
     const botInput = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
-    const greeting = this.state.firstShow &&  this.state.secondShow ? "show" : (this.state.show ? "show" : "" );
-    const mainSwitchboard = this.state.firstShow && !this.state.secondShow ? "firstShow" : "";
-    const interjections  = this.state.secondShow ? "secondShow" : "";
-
+    const greeting = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
+    
     return (<div>
         <div className="botPage">
         <div>
@@ -83,7 +81,7 @@ export default class Bots extends React.Component {
        </div>
       
        <div className={categoryStatus} id="category">
-       <input className="categoryInput" type="text" value="Add Category" placeholder="Add Category" />
+       <input className="categoryInput" type="text" placeholder="Add Category" />
       <ul>
           <li onClick={this.firstShow}>Greetings</li>
           <li onClick={this.firstShow}>Main Switchboard</li>
@@ -95,21 +93,26 @@ export default class Bots extends React.Component {
        <div>
        <div className={botStatus} id="bot">
        <h2>MASTER INTENTS</h2>
-      <input id="botInput" className={botInput} type="text" value="Add Intent" />
+      <input id="botInput" className={botInput} type="text" placeholder="Add Intent" />
 
-       <ul >
-      <li className={greeting} id="greeting">Default</li>
+       <ul id="greetingList">
+      <li className={greeting} id="greeting">Greetings</li>
+      <li className={greeting} id="greeting">Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</li>
+      <li className={greeting} id="greeting">How can I help you today?</li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
       </ul>
-
-      <ul >
-      <li className={mainSwitchboard} id="mainSwitchboard">test1</li>
-      </ul>
-
-
-        <ul >
-      <li className={interjections} id="interjections">test2</li>
-      </ul>
-
 
        </div>
        </div>

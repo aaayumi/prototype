@@ -2,14 +2,12 @@ import React from 'react';
 import Integrations from './Integrations';
 import Bots from './Bots';
 import Stats from './Stats';
-import Tenants from './Tenants';
 import 'font-awesome/css/font-awesome.css'
 
 const components = {
     integrations: Integrations,
     bots: Bots,
-    stats: Stats,
-    tenants: Tenants
+    stats: Stats
 }
 
 function Logo(props){
@@ -30,10 +28,6 @@ function NavBar(props) {
              <li className={"nav-item" + (props.active == "stats" ? " active" : "")}>
              <a className="nav-link" onClick={props.onStats}><i className="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
              </li>
-             <li className={"nav-item" + (props.active == "tenants" ? " active" : "")}>
-             <a className="nav-link" onClick={props.onTenants}><i className="fa fa-user fa-2x" aria-hidden="true"></i>
-             </a>
-             </li>
              <li className={"nav-item" + (props.active === "integrations" ? " active" : "")}>
              <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></a>
              </li>
@@ -45,10 +39,9 @@ export default class Dashboard extends React.Component {
 
     constructor(props) {
     super(props);
-    this.state = { tab: 'stats' };
+    this.state = { tab: 'bots' };
     this.onChatbots = this.onChatbots.bind(this);
     this.onStats = this.onStats.bind(this);
-    this.onTenants = this.onTenants.bind(this);
     this.onIntegrations = this.onIntegrations.bind(this);
     }
 
@@ -59,11 +52,6 @@ export default class Dashboard extends React.Component {
 
     onStats(e) {
     this.setState({ tab: 'stats'});
-    e.preventDefault();
-    }
-
-    onTenants(e) {
-    this.setState({tab: 'tenants'});
     e.preventDefault();
     }
 
@@ -81,7 +69,7 @@ export default class Dashboard extends React.Component {
     <Logo />
     <User />
     <div className="navBarContainer">
-    <NavBar active={currentTab} onChatbots={this.onChatbots} onStats={this.onStats} onTenants={this.onTenants}  onIntegrations={this.onIntegrations}  />
+    <NavBar active={currentTab} onChatbots={this.onChatbots} onStats={this.onStats} onIntegrations={this.onIntegrations}  />
     <div className="container"><TabComponent /></div>
     </div>
    </div>);
