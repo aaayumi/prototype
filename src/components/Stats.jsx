@@ -171,7 +171,7 @@ class Analytics extends React.Component {
   render(){
   return(<div className="analytics">
     <h2 className="analyticsTitle">ANALYTICS</h2>
-     <ul>
+     <ul className="dataList">
         <li> <div className="newData">
     <Line id="newUserData" data ={newUserData} height={this.state.height} width={this.state.width} />
     </div></li>
@@ -198,7 +198,7 @@ class Analytics extends React.Component {
 function Fallback(prop){
   return( <div className="fallback">
   <h2 className="fallbackTitle">Fallback - NonConfigured</h2>
-  <ul>
+  <ul className="fallbackList">
       <li> Total Handover Requests  0</li>
       <li> Agents Available 0</li>
       <li> Agents Unavailable 10</li>
