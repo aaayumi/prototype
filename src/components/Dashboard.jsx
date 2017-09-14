@@ -2,7 +2,12 @@ import React from 'react';
 import Integrations from './Integrations';
 import Bots from './Bots';
 import Stats from './Stats';
-import 'font-awesome/css/font-awesome.css'
+import twyla from '../twyla-logo.png';
+import client from '../client.png';
+import lighting from '../lighting-white.png';
+import analytics from '../analytics-white.png';
+
+import 'font-awesome/css/font-awesome.css';
 
 const components = {
     integrations: Integrations,
@@ -11,13 +16,12 @@ const components = {
 }
 
 function Logo(props){
-  return(<div className="navbar-brand"><a href="#">Twyla</a></div>);
+  return(<div className="navbar-brand"> <img src={twyla} className="twylaImg" alt="twyla" /></div>);
 }
 
 function User(props){
-  return(<div className="tenantName"><i className="fa fa-address-book fa-1x" aria-hidden="true"></i>DPD TwylaBot Demo</div>);
+  return(<div className="tenantName"><img src={client} className="clientImg" alt="client" />DPD TwylaBot Demo</div>);
 }
-
 
 function NavBar(props) {
    return (<nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
@@ -26,7 +30,7 @@ function NavBar(props) {
              <a className="nav-link" onClick={props.onChatbots}><i className="fa fa-comments fa-2x" aria-hidden="true"></i></a>
              </li>
              <li className={"nav-item" + (props.active == "stats" ? " active" : "")}>
-             <a className="nav-link" onClick={props.onStats}><i className="fa fa-line-chart fa-2x" aria-hidden="true"></i></a>
+             <a className="nav-link" onClick={props.onStats}><img src={analytics} className="analythicsImg" alt="analytics" /></a>
              </li>
              <li className={"nav-item" + (props.active === "integrations" ? " active" : "")}>
              <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></a>

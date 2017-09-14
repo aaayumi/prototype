@@ -1,6 +1,10 @@
 import React from 'react';
-import {FormRow, BigButton} from './Forms';
-import 'font-awesome/css/font-awesome.css'
+import wide from '../wide.png';
+import dictionary from '../dictionary.png';
+import BOT from '../BOT.png';
+import QUESTION from '../QUESTION.png';
+import chat from '../chat.png';
+import file from '../file.png';
 
 function Chatbot(props) {
     return (<li className="list-group-item">
@@ -89,7 +93,7 @@ export default class Bots extends React.Component {
        </div>
       
        <div className={categoryStatus} id="category">
-       <input className="categoryInput" type="text" placeholder="Add Category" />
+       <input className="categoryInput" type="text" placeholder="Add Category　　              +" />
       <ul>
           <li id="greetingMenu" className={greetingMenu} onClick={this.show}>Greetings</li>
           <li id="mainSwitchboardMenu" className={mainSwitchboardMenu} onClick={this.firstShow}>Main Switchboard</li>
@@ -101,12 +105,12 @@ export default class Bots extends React.Component {
        <div>
        <div className={botStatus} id="bot">
        <h2>MASTER INTENTS</h2>
-      <input id="botInput" className={botInput} type="text" placeholder="Add Intent" />
+      <input id="botInput" className={botInput} type="text" placeholder="Add Intent                                                                                                                                                                                                             +" />
 
        <ul className={greetingList} id="greetingList">
-      <li className={greeting} id="greeting">Greetings</li>
-      <li className={greeting} id="greeting">Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</li>
-      <li className={greeting} id="greeting">How can I help you today?</li>
+      <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar"> ▼ </div>   <img src={file} className="fileImg" alt="file" />  Greetings</div></li>
+      <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar">CUD001    ▼ </div><img src={chat} className="chatImg" alt="chat" />     Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</div></li>
+      <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar">CUD002    ▼ </div> <img src={chat} className="chatImg" alt="chat" />    How can I help you today?</div></li>
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
@@ -135,13 +139,19 @@ export default class Bots extends React.Component {
       <div className="firstContainer">
       <navbar>
       <ul>
-          <li id="one"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
-          <li id="two"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+          <li id="one"><img src={wide} className="wideImg" alt="wide" /></li>
+          <li id="two"><img src={dictionary} className="dictionaryImg" alt="dictionary" /></li>
           <li id="three"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
       </ul>
       </navbar>
       </div>
       <div className="secondContainer">
+       <navbar>
+        <ul>
+          <li id="one"><img src={BOT} className="BOTImg" alt="BOT" />BOT</li>
+          <li id="two"><img src={QUESTION} className="QUESTIONImg" alt="QUESTION" />USER</li>
+        </ul>
+       </navbar>
       </div>
       </div>
       </div>

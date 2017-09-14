@@ -19,13 +19,13 @@ body {
 
 .navbar-brand {
     text-decoration: none;
-    background-color: #440C4E;
+    background-color:  #51436f;
     padding: 20px 20px;
 }
 
 .tenantName {
     text-decoration: none;
-    background-color: #312F32;
+    background-color: #454545;
     color: white;
     padding: 20px 20px;
 }
@@ -60,7 +60,7 @@ body {
 
 .navbar li:hover{
     padding-bottom: 10px;
-    background-color: #33B86F;
+    background-color: #79d888;
 }
 
 /***** BOT *****/
@@ -71,7 +71,7 @@ body {
     margin-left: 100px;
     height: 700px;
     justify-content: space-between;
-}
+} 
 
 .categoryContainer {
     margin-top: 0;
@@ -85,7 +85,7 @@ body {
 }
 
 .categoryContainer button {
-    background-color: #656166;
+    background-color:  #666666;
     border: 0;
     height: 50px;
 }
@@ -101,7 +101,7 @@ body {
 }
 
 #category {
-    background-color: #ECE7E1;
+    background-color: #f2f2f2;
     height: 800px;
     width: 100%;
     padding-top: 30px;
@@ -113,7 +113,7 @@ body {
     margin-left: 40px;
     padding: 10px 10px;
     width: 150px;
-    background-color: lightgrey;
+    background-color: #d7d7d7;
     border: none;
 }
 
@@ -128,9 +128,9 @@ body {
 }
 
 #greetingMenu {
-    background-color: #CE95F9;
+    background-color: #ddd8e2;
     border-style: solid;
-    border-left: 15px solid #7303C7;
+    border-left: 15px solid  #51436f;
     border-right: 0;
     border-top: 0;
     border-bottom: 0;
@@ -225,7 +225,7 @@ body {
 
 
 #greetingList li:nth-child(odd) {
-    background-color: #E9D4F9;
+    background-color: #f9f9fb;
    
 }
 
@@ -262,6 +262,16 @@ body {
     width: 1500px;
 }
 
+.shortChar {
+    margin-left: 15px;
+    font-size: 10px;
+    color: grey;
+}
+
+.botLine {
+    display: flex;
+}
+
 #accessory {
     border: 1px solid black;
     width: 250px;
@@ -275,11 +285,11 @@ body {
 }
 
 #accessoryButton{
-    background-color: #656166;
+    background-color: #666666;
 }
 
 #accessoryButton button {
-    background-color: #656166;
+    background-color: #666666;
     border: none;
     padding: 10px 10px;
 }
@@ -289,7 +299,7 @@ body {
 }
 
 .slideoutButton {
-    background-color: #656166;
+    background-color: #666666;
     color: white;
 }
 
@@ -323,13 +333,33 @@ body {
 .firstContainer li:hover{
    padding: 10px 35px;
    color: white;
-   background-color: #33B86F;
+   background-color: #79d888;
 }
 
 .secondContainer {
    height: 30vh;
    border: 1px solid #6C6D6C;
 
+}
+
+.secondContainer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: -40px;
+}
+
+.secondContainer li {
+   padding: 5px 20px;
+   color: white;
+   background-color: lightgrey;
+}
+
+.secondContainer li:hover{
+   padding: 5px 20px;
+   color: white;
+   background-color: #51436f;
 }
 
 /***** STATS *****/
@@ -508,4 +538,35 @@ body {
     flex-basis: calc(33% - 20px);
     justify-content: center;
     flex-direction: column;
+}
+
+/*** LOGO/IMAGES ***/
+.twylaImg {
+    height: 30px;
+}
+
+.clientImg {
+    height: 30px;
+    width: 30px;
+}
+
+.chatImg {
+    height: 40px;
+    width: 40px;
+}
+
+.facebookImg, .SkypeImg , .SMSImg, .SMOOCHImg,
+.ALEXAImg, .LINEImg, .SLACKImg, .TELEGRAMImg
+{
+    height: 50px;
+    width: 50px;
+}
+
+.wideImg, .dictionaryImg, .BOTImg, .QUESTIONImg {
+    height: 50px;
+    width: 30px;
+}
+
+.fileImg, .chatImg {
+    margin-right: 15px;
 }
