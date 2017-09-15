@@ -99,9 +99,9 @@ export default class Bots extends React.Component {
        </div>
       
        <div className={categoryStatus} id="category">
-       <input className="categoryInput" type="text" placeholder="Add Category　　              +" />
+       <input className="categoryInput" type="text" placeholder="Add Category　　                                +" />
       <ul>
-          <li id="greetingMenu" className={greetingMenu} onClick={this.show}>Greetings</li>
+          <li id="greetingMenu" className={greetingMenu} onClick={this.show}>. Greetings</li>
           <li id="mainSwitchboardMenu" className={mainSwitchboardMenu} onClick={this.firstShow}>Main Switchboard</li>
           <li id="interjectionsMenu" className={interjectionsMenu} onClick={this.secondShow}>Interjections</li>
       </ul>
@@ -111,11 +111,11 @@ export default class Bots extends React.Component {
        <div>
        <div className={botStatus} id="bot">
        <h2>MASTER INTENTS</h2>
-      <input id="botInput" className={botInput} type="text" placeholder="Add Intent                                                                                                                                                                                                             +" />
+      <input id="botInput" className={botInput} type="text" placeholder="Add Intent" />
 
        <ul className={greetingList} id="greetingList">
       <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar"> ▼ </div>   <img src={file} className="fileImg" alt="file" />  Greetings</div></li>
-      <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar">CUD001    ▼ </div><img src={chat} className="chatImg" alt="chat" />     Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</div></li>
+      <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar">CUD001    ▼ </div><img src={chat} className="chatImg" alt="chat" /> Hi, FB name, welcome to the DPD Support Center. My name is Otto, DPD's virtual assistant.</div></li>
       <li className={greeting} id="greeting"><div className="botLine"><div className="shortChar">CUD002    ▼ </div> <img src={chat} className="chatImg" alt="chat" />    How can I help you today?</div></li>
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
@@ -154,12 +154,13 @@ export default class Bots extends React.Component {
       </div>
 
       <div className="secondContainer">
-       <navbar>
         <ul>
           <li id="one"><img src={BOT} className="BOTImg" alt="BOT" />BOT</li>
           <li id="two"><img src={QUESTION} className="QUESTIONImg" alt="QUESTION" />USER</li>
         </ul>
-       </navbar>
+        <div className="secondContainerBorder">
+        <p>Add a chat bot emmission here</p>
+        </div>
       </div>
       </div>
       </div>

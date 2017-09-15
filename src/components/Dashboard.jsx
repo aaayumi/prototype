@@ -20,20 +20,20 @@ function Logo(props){
 }
 
 function User(props){
-  return(<div className="tenantName"><img src={client} className="clientImg" alt="client" />  DPD TwylaBot Demo</div>);
+  return(<div className="tenantName"><img src={client} className="clientImg" alt="client" />DPD TwylaBot Demo</div>);
 }
 
 function NavBar(props) {
    return (<nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
         <ul className="navbar-nav mr-auto">
              <li className={"nav-item" + (props.active == "bots" ? " active" : "")}>
-             <a className="nav-link" onClick={props.onChatbots}><i className="fa fa-comments fa-2x menuImg" aria-hidden="true"></i></a>
+             <a className="nav-link" onClick={props.onChatbots}><i className="fa fa-comments fa-1x menuImg" aria-hidden="true"></i></a>
              </li>
              <li className={"nav-item" + (props.active == "stats" ? " active" : "")}>
              <a className="nav-link" onClick={props.onStats}><img src={analytics} className="analythicsImg" alt="analytics" /></a>
              </li>
              <li className={"nav-item" + (props.active === "integrations" ? " active" : "")}>
-             <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-2x lightingImg" aria-hidden="true"></i></a>
+             <a className="nav-link" onClick={props.onIntegrations}><i className="fa fa-bolt fa-1x lightingImg" aria-hidden="true"></i></a>
              </li>
         </ul>
           </nav>);

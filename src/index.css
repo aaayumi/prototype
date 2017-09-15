@@ -29,6 +29,13 @@ body {
     background-color: #454545;
     color: white;
     padding: 10px 10px;
+    padding-bottom: 10px;
+}
+
+.tenantName img {
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .navbar-brand a {
@@ -39,7 +46,7 @@ body {
 .navbar {
     background-color: #4F504F;
     color: white;
-    height: 890px;
+    height: 930px;
     width: 100px;
     position: absolute;
     margin-left: -50px;
@@ -84,44 +91,50 @@ body {
      width: 250px;
 } */
 
-
-
 .categoryContainer {
     margin-top: 0;
-    background-color: #656166;
+    background-color: #666666;
     display: flex;
+    height: 50px;
 }
 
 .categoryContainer h3 {
     color: white;
     padding-right: 20px;
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+.categoryContainer i {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .categoryContainer button {
-    background-color:  #666666;
+    background-color: #666666;
     border: 0;
     height: 50px;
-    display: absolute;
+    display: fixed;
+    text-align: center;
 }
 
 .slideinButton {
-    background-color: #656166 ;
-    padding-right: 50px;
+    background-color: #666666;
+    padding-right: 10px;
+    padding-left: 20px;
+    text-decoration: center;
     color: white;
-    display: absolute;
-}
-
-.categoryContainer h3 {
-     margin-left: 40px;
+    display: fixed;
 }
 
 #category {
     background-color: #f2f2f2;
-    height: 800px;
+    height: 850px;
     width: 100%;
     padding-top: 30px;
     display: absolute;
     transition: transform 600ms ease-out;
+    z-index: 1;
 }
 
 .categoryInput {
@@ -138,7 +151,7 @@ body {
 
 #category li {
     padding: 10px 5px;
-    padding-left: 20px;
+    padding-left: 0px;
     padding-bottom: 10px;
 }
 
@@ -152,18 +165,21 @@ body {
     margin-left: -40px;
 }
 
+#mainSwitchboardMenu , #interjectionsMenu {
+    margin-left: -15px;
+}
 #category.caOpen {
     width: -200px;
     transform: translateX(-100%);
 }
 
-.categoryContainer .caOpen {
+/* #categoryContainer.caOpen {
     display: none;
     margin-top: 0;
     transition: .3s;
     height: 100px;
-   
-}
+    background-color: green;
+} */
 
 .categoryContainer .caOpen button {
      background-color: red;
@@ -182,14 +198,16 @@ body {
 } 
 
 #bot h2 {
-    margin-left: 20px;
-    margin-bottom: 50px;
+    margin-left: -15px;
+    margin-bottom: 30px;
+    font-size: 14px;
 }
 
 #bot input {
-    margin-left: 20px;
+    margin-left: -15px;
     margin-right: 20px;
-    width: 700px;
+    margin-bottom: 20px;
+    width: 800px;
     padding: 10px 10px;
     border: 10px solid #E6E3E8;
     -webkit-transition: all 0.5s ease;
@@ -201,7 +219,7 @@ body {
 #botInput.caOpen {
     margin-left: -200px;
     width: 950px;
-       -webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -219,10 +237,6 @@ body {
 #botInput.allOpen {
     margin-left: -200px;
     width: 1200px;
-}
-
-#bot h2 {
-    display: absolute;
 }
 
 #bot .botInput {
@@ -246,13 +260,26 @@ body {
 
 #greeting {
     height: 40px;
-    width: 880px;
-    margin-left: -80px;
+    width: 890px;
+    margin-left: -85px;
+    z-index: -1;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
     -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
 }
+
+#greeting img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* #greeting p {
+    display: inline-block;
+    vertical-align: top;
+     text-align: center; 
+} */
+
 
 #greeting.caOpen {
     margin-left: -330px;
@@ -315,6 +342,15 @@ body {
 .slideoutButton {
     background-color: #666666;
     color: white;
+    padding-left: 10px;
+}
+
+.fa-share {
+    color: lightgrey;
+}
+
+.fa-reply {
+    color: lightgrey;
 }
 
 #accessory.acOpen { 
@@ -375,11 +411,12 @@ body {
 } */
 
 .firstContainer {
-     border: 1px solid #656166  ;
+     border: 1px solid #656166;
      height: 60vh;
    /*  display: flex;
      flex-direction: row; */
      width: 250px;
+     color:  #666666;
 } 
 
 .firstContainer ul {
@@ -388,7 +425,7 @@ body {
     flex-direction: row;
     margin-top: 0px;
     margin-left: -40px;
-    height: 50px;
+    height: 40px;
     width: 250px;
 } 
 
@@ -396,32 +433,30 @@ body {
    width: 33.3%;
    text-align: center;
    color: white;
-   background-color: #656166;
+   background-color: #666666;
 }
 
 .firstContainer p {
-    padding-left: 10px;
+   padding-left: 10px;
    padding-top: 20px;
+   font-size: 12px;
 }
-
-/* .firstContainer li:hover{
-   width: 33.3%;
-   text-align: center;
-   color: white;
-   background-color: #79d888;
-} */
 
 .firstContainer #one {
     background-color: #79d888;
 }
 
-.firstContainer p {
-    margin-top: 300px;
+.secondContainer {
+   border: 1px solid #656166;
+   height: 45vh;
+   color:  #666666;
+   font-size: 13px;
 }
 
-.secondContainer {
-   height: 45vh;
-   border: 1px solid #6C6D6C;
+.secondContainer img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .secondContainer ul {
@@ -430,6 +465,7 @@ body {
     flex-direction: row;
     margin-top: 0px;
     margin-left: -40px;
+    height: 45px;
 }
 
 .secondContainer li {
@@ -438,6 +474,15 @@ body {
    color: white;
    background-color: lightgrey;
 }
+
+.secondContainer #two {
+   color: #666666;
+}
+
+.secondContainer p {
+  padding-left: 10px;
+}
+
 
 /*.secondContainer li:hover{
    width: 50%;
@@ -455,10 +500,13 @@ body {
 .Stats{
    margin-left: 70px;
    margin-right: 10px;
+   color:  #666666;
 }
 
 .analyticsTitle {
     margin-left: 40px;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .dataList {
@@ -472,7 +520,7 @@ body {
 }
 
 .dataList li {
-   border: 2px solid black;
+   border: 2px solid #666666;;
    
 }
 
@@ -484,8 +532,6 @@ body {
 .analytics {
    display: absolute;
 }
-
-
 
 .analytics ul {
     list-style-type: none;
@@ -612,8 +658,9 @@ body {
 }
 
 .integrationPage h3 {
-    font-size:  25px;
     color:  #666666;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .integrationist {
@@ -675,15 +722,17 @@ body {
 }
 
 .wideImg, .dictionaryImg, .BOTImg, .QUESTIONImg, .lightingMenuImg {
-    height: 50px;
-    width: 30px;
+    height: 40px;
+    width: 20px;
 }
 
 .fileImg, .chatImg {
     margin-right: 15px;
+    height: 30px;
+    width: 30px;
 }
 
 .analythicsImg {
-    height: 30px;
-    width: 30px;
+    height: 15px;
+    width: 15px;
 }
