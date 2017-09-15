@@ -14,14 +14,14 @@ render(){
   return(
   <div className="integrationist">
   <ul>
-      <li><img src={facebook} className="facebookImg" alt="facebook" />FACEBOOK MESSANGER</li>
-      <li><img src={Skype} className="SkypeImg" alt="Skype" />SKYPE</li>
-      <li><img src={SMS} className="SMSImg" alt="SMS" />SMS(TWILIO)</li>
-      <li><img src={SMOOCH} className="SMOOCHImg" alt="SMOOCH" />SMOOCH</li>
-      <li><img src={ALEXA} className="ALEXAImg" alt="ALEXA" />ALEXA</li>
-      <li><img src={LINE} className="LINEImg" alt="LINE" />LINE</li>
-      <li><img src={SLACK} className="SLACKImg" alt="SLACK" />SLACK</li>
-      <li><img src={TELEGRAM} className="TELEGRAMImg" alt="TELEGRAM" />TELEGRAM</li>
+      <li><img src={facebook} className="facebookImg" alt="facebook" />FACEBOOK MESSANGER<button className="connected">CONNECTED</button></li>
+      <li><img src={Skype} className="SkypeImg" alt="Skype" />SKYPE<button className="connected">CONNECTED</button></li>
+      <li><img src={SMS} className="SMSImg" alt="SMS" />SMS(TWILIO)<p className="activate">ACTIVE</p></li>
+      <li><img src={SMOOCH} className="SMOOCHImg" alt="SMOOCH" />SMOOCH<p className="activate">ACTIVE</p></li>
+      <li><img src={ALEXA} className="ALEXAImg" alt="ALEXA" />ALEXA<p>DISABLED</p></li>
+      <li><img src={LINE} className="LINEImg" alt="LINE" />LINE<p>DISABLED</p></li>
+      <li><img src={SLACK} className="SLACKImg" alt="SLACK" />SLACK<p>DISABLED</p></li>
+      <li><img src={TELEGRAM} className="TELEGRAMImg" alt="TELEGRAM" />TELEGRAM<p>DISABLED</p></li>
   </ul>
   </div>
   )}

@@ -5,6 +5,7 @@ import BOT from '../BOT.png';
 import QUESTION from '../QUESTION.png';
 import chat from '../chat.png';
 import file from '../file.png';
+import lightingMenu from '../lighting-menu.png';
 
 function Chatbot(props) {
     return (<li className="list-group-item">
@@ -61,15 +62,20 @@ export default class Bots extends React.Component {
 
     render() {
     const chatbots = this.state.chatbots.map((bot) => <Chatbot bot={bot} key={bot.id}/>);
+
     const categoryStatus = this.state.caOpen ? "caOpen" : "";
     const categoryContainer = this.state.caOpen ? "caOpen" : "";
+
     const accessoryStatus = this.state.acOpen ? "acOpen" : "";
     const accessoryButton = this.state.acOpen ? "acOpen" : "";
+
     const botStatus = !this.state.isOpen ? "isopen" : "";
     const botInput = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
+
     const greeting = this.state.caOpen && !this.state.acOpen ? "caOpen" : ( this.state.acOpen && !this.state.caOpen ? "acOpen" : ( this.state.caOpen && this.state.acOpen? "allOpen" : ""));
     const greetingList = !this.state.show ? "show" : "";
     const greetingMenu = !this.state.show ? "active" : "";
+
     const mainSwitchboard = !this.state.firstShow ? "firstShow" : "";
     const mainSwitchboardMenu = !this.state.firstShow ? "active" : "";
     const interjections  = this.state.secondShow ? "secondShow" : "";
@@ -124,11 +130,13 @@ export default class Bots extends React.Component {
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
       <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
+      <li className={greeting} id="greeting"></li>
       </ul>
        </div>
        </div>
 
-      <div className="accessoryContainer">
+       <div className="accessoryContainer">
       <div className={accessoryButton} id="accessoryButton">
       <button onClick={this.clickHandle}>{this.state.acOpen
     ? <i className="slideoutButton fa fa-reply fa-2x" aria-hidden="true"></i>
@@ -137,14 +145,14 @@ export default class Bots extends React.Component {
       </div>
       <div className={accessoryStatus} id="accessory">
       <div className="firstContainer">
-      <navbar>
-      <ul>
+      <ul className="firstContainerMenu">
           <li id="one"><img src={wide} className="wideImg" alt="wide" /></li>
           <li id="two"><img src={dictionary} className="dictionaryImg" alt="dictionary" /></li>
-          <li id="three"><i className="fa fa-bolt fa-2x" aria-hidden="true"></i></li>
+          <li id="three"><img src={lightingMenu} className="lightingMenuImg" alt="ightingMenuImg" /></li>
       </ul>
-      </navbar>
+       <p>Train your TwylaBot conversationally. Use the action triggers to link to data.</p>
       </div>
+
       <div className="secondContainer">
        <navbar>
         <ul>

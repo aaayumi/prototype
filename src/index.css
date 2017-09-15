@@ -15,19 +15,20 @@ body {
 .navBarContainer {
    display: flex;
    flex-direction: column;
+
 }
 
 .navbar-brand {
     text-decoration: none;
     background-color:  #51436f;
-    padding: 20px 20px;
+    padding: 10px 10px;
 }
 
 .tenantName {
     text-decoration: none;
     background-color: #454545;
     color: white;
-    padding: 20px 20px;
+    padding: 10px 10px;
 }
 
 .navbar-brand a {
@@ -41,7 +42,7 @@ body {
     height: 890px;
     width: 100px;
     position: absolute;
-    float: left;
+    margin-left: -50px;
     z-index: 1;
 }
 
@@ -68,10 +69,22 @@ body {
 .botPage {
     display: flex;
     flex:  1;
-    margin-left: 100px;
+    margin-left: 50px;
     height: 700px;
     justify-content: space-between;
 } 
+
+
+/* .firstContainer {
+     border: 1px solid #656166  ;
+     height: 60vh;
+     display: grid;
+     grid-template-rows: ;: 1fr 1fr 1fr;
+     grid-gap: 0px;
+     width: 250px;
+} */
+
+
 
 .categoryContainer {
     margin-top: 0;
@@ -88,12 +101,14 @@ body {
     background-color:  #666666;
     border: 0;
     height: 50px;
+    display: absolute;
 }
 
 .slideinButton {
     background-color: #656166 ;
     padding-right: 50px;
     color: white;
+    display: absolute;
 }
 
 .categoryContainer h3 {
@@ -110,9 +125,9 @@ body {
 }
 
 .categoryInput {
-    margin-left: 40px;
+    margin-left: 10px;
     padding: 10px 10px;
-    width: 150px;
+    width: 210px;
     background-color: #d7d7d7;
     border: none;
 }
@@ -134,6 +149,7 @@ body {
     border-right: 0;
     border-top: 0;
     border-bottom: 0;
+    margin-left: -40px;
 }
 
 #category.caOpen {
@@ -163,7 +179,7 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-}
+} 
 
 #bot h2 {
     margin-left: 20px;
@@ -176,7 +192,7 @@ body {
     width: 700px;
     padding: 10px 10px;
     border: 10px solid #E6E3E8;
-      -webkit-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -189,7 +205,6 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-
 }
 
 #botInput.acOpen {
@@ -231,8 +246,8 @@ body {
 
 #greeting {
     height: 40px;
-    width: 830px;
-    margin-left: -55px;
+    width: 880px;
+    margin-left: -80px;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
     -o-transition: all 0.7s ease;
@@ -240,8 +255,8 @@ body {
 }
 
 #greeting.caOpen {
-    margin-left: -290px;
-    width: 1090px;
+    margin-left: -330px;
+    width: 1135px;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
     -o-transition: all 0.7s ease;
@@ -258,7 +273,7 @@ body {
 }
 
 #greeting.allOpen {
-    margin-left: -290px;
+    margin-left: -330px;
     width: 1500px;
 }
 
@@ -273,7 +288,6 @@ body {
 }
 
 #accessory {
-    border: 1px solid black;
     width: 250px;
     display: fixed;
     z-index: 1;
@@ -284,7 +298,7 @@ body {
     width: 250px;
 }
 
-#accessoryButton{
+#accessoryButton {
     background-color: #666666;
 }
 
@@ -309,14 +323,35 @@ body {
    transform: translateX(100%);
 }
 
-.firstContainer {
-     border: 1px solid #656166  ;
-     height: 60vh;
-     display: flex;
-     flex-direction: row;
+/*  .firstContainerMenu {
+    margin-left:0 ;
+    margin-right: 0;
+    padding-left:0 ;
+    background-color: #656166;
+    list-style: none;
+    margin-top: 0px;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
 }
 
-.firstContainer ul {
+.firstContainerMenu li {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 40px;
+}
+
+.firstContainerMenu li:hover {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #79d888;
+    padding: 0px 40px 0px 40px;
+}
+
+*/
+
+#accessoryButton ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -324,22 +359,69 @@ body {
     margin-left: -40px;
 }
 
-.firstContainer li {
+#accessoryButton li {  
    padding: 10px 35px;
    color: white;
    background-color: #656166;
 }
 
-.firstContainer li:hover{
-   padding: 10px 35px;
+/* .firstContainer {
+     border: 1px solid #656166  ;
+     height: 60vh;
+     display: grid;
+     grid-template-rows: ;: 1fr 1fr 1fr;
+     grid-gap: 0px;
+     width: 250px;
+} */
+
+.firstContainer {
+     border: 1px solid #656166  ;
+     height: 60vh;
+   /*  display: flex;
+     flex-direction: row; */
+     width: 250px;
+} 
+
+.firstContainer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-left: -40px;
+    height: 50px;
+    width: 250px;
+} 
+
+.firstContainer li {
+   width: 33.3%;
+   text-align: center;
+   color: white;
+   background-color: #656166;
+}
+
+.firstContainer p {
+    padding-left: 10px;
+   padding-top: 20px;
+}
+
+/* .firstContainer li:hover{
+   width: 33.3%;
+   text-align: center;
    color: white;
    background-color: #79d888;
+} */
+
+.firstContainer #one {
+    background-color: #79d888;
+}
+
+.firstContainer p {
+    margin-top: 300px;
 }
 
 .secondContainer {
-   height: 30vh;
+   height: 45vh;
    border: 1px solid #6C6D6C;
-
 }
 
 .secondContainer ul {
@@ -351,15 +433,21 @@ body {
 }
 
 .secondContainer li {
-   padding: 5px 20px;
+   width: 50%;
+   text-align: center;
    color: white;
    background-color: lightgrey;
 }
 
-.secondContainer li:hover{
-   padding: 5px 20px;
+/*.secondContainer li:hover{
+   width: 50%;
+   text-align: center;
    color: white;
    background-color: #51436f;
+} */
+
+.secondContainer #one {
+    background-color: #51436f;
 }
 
 /***** STATS *****/
@@ -517,11 +605,19 @@ body {
 
 /***** INTEGRATION *****/
 .integrationPage {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 150px;
+    color:  #666666;
+    font-size: 15px;
+}
+
+.integrationPage h3 {
+    font-size:  25px;
+    color:  #666666;
 }
 
 .integrationist {
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -533,11 +629,26 @@ body {
 }
 
 .integrationist li {
-    padding: 30px 30px;
+    padding: 10px 20px;
     display: flex;
     flex-basis: calc(33% - 20px);
     justify-content: center;
     flex-direction: column;
+}
+
+
+.connected {
+    background-color: #E6E3E8;
+    color:  #666666;
+    margin-top: 10px;
+    width: 150px;
+    padding: 10px 30px 10px 30px;
+    border: 0px;
+}
+
+.activate {
+    color: black;
+    text-decoration: underline;
 }
 
 /*** LOGO/IMAGES ***/
@@ -558,15 +669,21 @@ body {
 .facebookImg, .SkypeImg , .SMSImg, .SMOOCHImg,
 .ALEXAImg, .LINEImg, .SLACKImg, .TELEGRAMImg
 {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 20px;
 }
 
-.wideImg, .dictionaryImg, .BOTImg, .QUESTIONImg {
+.wideImg, .dictionaryImg, .BOTImg, .QUESTIONImg, .lightingMenuImg {
     height: 50px;
     width: 30px;
 }
 
 .fileImg, .chatImg {
     margin-right: 15px;
+}
+
+.analythicsImg {
+    height: 30px;
+    width: 30px;
 }
