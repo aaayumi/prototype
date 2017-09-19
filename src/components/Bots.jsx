@@ -6,6 +6,7 @@ import QUESTION from '../QUESTION.png';
 import chat from '../chat.png';
 import file from '../file.png';
 import lightingMenu from '../lighting-menu.png';
+import 'font-awesome/css/font-awesome.css'
 
 function Chatbot(props) {
     return (<li className="list-group-item">

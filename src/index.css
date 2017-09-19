@@ -35,7 +35,6 @@ body {
 .tenantName img {
     margin-right: 10px;
     vertical-align: middle;
-    display: inline-block;
 }
 
 .navbar-brand a {
@@ -260,8 +259,8 @@ body {
 
 #greeting {
     height: 40px;
-    width: 890px;
-    margin-left: -85px;
+    width: 900px;
+    margin-left: -90px;
     z-index: -1;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
